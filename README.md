@@ -1,4 +1,5 @@
 ```html:docker.html
+# sudo = super user do
 sudo apt-get update 
 
 sudo apt-get upgrade 
@@ -39,6 +40,8 @@ sudo docker run my-image:v1.0.0
 sudo docker images|grep my-image
 # |는 파이프라인으로써, 앞의 명령어와 뒤의 명령어를 이어주고, 실행한다는 뜻이다.
 # grep 명령문은 해당 리스트에서 사용자가 입력한 키워드가 포함된 파일을 찾아준다는 뜻이다.
+
+sudo docker run -d -p 5000:5000 --name registry registry
 ```
 ```html:docker1.html
 sudo docker run hello-world 

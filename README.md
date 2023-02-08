@@ -29,7 +29,7 @@ vi Dockerfile
 
 ## keyboard esc and shift + :wq
 
-docker build -t my-image
+sudo docker build -t my-image:v.1.0.0 .
 ```
 ```html:docker1.html
 sudo docker run hello-world 

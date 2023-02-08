@@ -41,8 +41,45 @@ sudo docker images|grep my-image
 # |는 파이프라인으로써, 앞의 명령어와 뒤의 명령어를 이어주고, 실행한다는 뜻이다.
 # grep 명령문은 해당 리스트에서 사용자가 입력한 키워드가 포함된 파일을 찾아준다는 뜻이다.
 
-sudo docker run -d -p 5000:5000 --name registry registry
 ```
+![image](https://user-images.githubusercontent.com/58325946/217414598-ad4159b5-7bd1-4140-9202-05a8dc9a3044.png)
+
+```html:docker3.html
+sudo docker run -d -p 5000:5000 --name registry registry
+
+sudo docker ps
+
+sudo docker tag my-image:v1.0.0 localhost:5000/my-image:v1.0.0
+
+sudo docker images
+
+sudo docker push localhost:5000/my-image:v1.0.0
+# docker localhost, port 5000으로 배포하는 기능이다.
+
+curl
+# curl은 리눅스 명령어중에 네트워킹까지 같이 사용하는 명령어중 하나이다.
+
+curl -X GET http://localhost:5000/v2/_catalog
+# GET 방식으로 해당 도메인 주소를 호출하는 명령어이다, azure와 postman할때 get, post방식중 get으로 도메인을 호출하면서 많이 사용했던것과 같다.
+
+docker login
+# docker 계정로그인
+
+sudo docker push carrier1269/my-image:v1.0.0
+# docker 계정으로 배포하는 기능이다
+
+sudo docker images
+# docker file images를 확인하는 명령어
+
+sudo docker ps -a
+# docker file images에 대한 container를 확인하는 명령어
+# images는 곧 container라고 봐도 무방하다.
+
+```
+![image](https://user-images.githubusercontent.com/58325946/217415309-a5896445-c018-46b8-bef8-4d6c13ac40fc.png)
+![image](https://user-images.githubusercontent.com/58325946/217415361-780c4aab-4618-48e1-b804-17b311ecc86a.png)
+
+
 ```html:docker1.html
 sudo docker run hello-world 
 

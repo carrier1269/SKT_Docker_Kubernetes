@@ -12,7 +12,24 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 sudo apt-get update 
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io 
+```
 
+```html:docker.html
+cd $HOME
+ls -al
+mkdir docker-practice
+cd docker-practice
+touch Dockerfile
+cat Dockerfile
+vi Dockerfile
+
+# FROM ubuntu:18.04
+# RUN sudo apt-get update
+# CMD ["echo","Hello Docker"]
+
+docker build -t my-image
+```
+```html:docker1.html
 sudo docker run hello-world 
 
 sudo usermod -a -G docker $USER 

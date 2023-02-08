@@ -24,5 +24,5 @@ minikube start --driver=docker
 ![image](https://user-images.githubusercontent.com/58325946/217417321-6d4c97a4-d387-4f0b-9ec3-e9cd1aef0841.png)
 ```html:ku3.html
 minikube status
-# minikube 상태 
+# minikube 상태 확인하기
 ```

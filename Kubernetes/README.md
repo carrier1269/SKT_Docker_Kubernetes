@@ -25,4 +25,33 @@ minikube start --driver=docker
 ```html:ku3.html
 minikube status
 # minikube 상태 확인하기
+
+kubectl get pod -n kube-system
+
+minikube delete
+
+minikube start --driver=docker
+
+cd ..
+vi pod.yaml
+
+# vi file editor
+apiVersion: v1 # kubernetes resource 의 API Version 
+kind: Pod # kubernetes resource name 
+metadata: # 메타데이터 : name, namespace, labels, annotations 등을 포함 
+  name: counter 
+spec: # 메인 파트 : resource 의 desired state 를 명시 
+  containers: 
+  - name: count # container 의 이름 
+    image: busybox # container 의 image 
+    args: [/bin/sh, -c, 'i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done'] # 해당 image 의 entrypoint 의 args 로 입력하고 싶은 부분 
+# vi file editor
+
+kubectl apply -f  pod.yaml
+
+kubectl get pod
+
+kubectl get pod -n kube-system
+
+kubectl get pod -a
 ```

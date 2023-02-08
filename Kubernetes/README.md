@@ -55,3 +55,4 @@ kubectl get pod -n kube-system
 
 kubectl get pod -a
 ```
+![image](https://user-images.githubusercontent.com/58325946/217422983-c4863d32-d053-4feb-822e-f3a6dcd9a89f.png)

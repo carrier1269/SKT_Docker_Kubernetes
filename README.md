@@ -27,6 +27,8 @@ vi Dockerfile
 # RUN sudo apt-get update
 # CMD ["echo","Hello Docker"]
 
+## keyboard esc and shift + :wq
+
 docker build -t my-image
 ```
 ```html:docker1.html

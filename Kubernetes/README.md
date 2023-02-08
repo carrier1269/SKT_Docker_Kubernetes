@@ -16,6 +16,13 @@ minikube start --driver=docker
 ```
 ![image](https://user-images.githubusercontent.com/58325946/217416911-7507500e-1f6e-455d-9660-0ca3cc22b451.png)
 ```html:ku2.html
+sudo usermod -aG docker $USER && newgrp docker
 
-
+minikube start --driver=docker
+# 유저모드로 진입해서 minikube를 실행하면, docker images를 다운받는 것을 확인할 수 있다.
+```
+![image](https://user-images.githubusercontent.com/58325946/217417321-6d4c97a4-d387-4f0b-9ec3-e9cd1aef0841.png)
+```html:ku3.html
+minikube status
+# minikube 상태 
 ```
